@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Contact - Générateur de QR Code</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.2rem;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .email-link {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(102,126,234,0.4);
+        }
+
+        .email-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102,126,234,0.6);
+        }
+
+        .info-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .info-section h2 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .info-section p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .info-section ul {
+            margin-left: 20px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .info-section li {
+            margin-bottom: 8px;
+        }
+
+        .warning {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .warning p {
+            color: #92400e;
+            margin: 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .email-link {
+                font-size: 1rem;
+                padding: 12px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Retour au générateur</a>
+        
+        <h1>📧 Contact</h1>
+        <p class="subtitle">Nous sommes là pour vous aider</p>
+
+        <div class="contact-box">
+            <div class="contact-icon">✉️</div>
+            <h2 style="color: #333; margin-bottom: 10px;">Contactez-nous par email</h2>
+            <p style="color: #666;">Pour toute question, suggestion ou problème</p>
+            <a href="mailto:contact@exemple.com" class="email-link">contact@exemple.com</a>
+        </div>
+
+        <div class="warning">
+            <p><strong>⚠️ Important :</strong> Remplacez "contact@exemple.com" par votre vraie adresse email avant de mettre en ligne.</p>
+        </div>
+
+        <div class="info-section">
+            <h2>💬 Pour quoi nous contacter ?</h2>
+            <ul>
+                <li><strong>Support technique :</strong> Problèmes avec le générateur</li>
+                <li><strong>Suggestions :</strong> Nouvelles fonctionnalités que vous aimeriez voir</li>
+                <li><strong>Bugs :</strong> Signaler un dysfonctionnement</li>
+                <li><strong>Questions légales :</strong> Politique de confidentialité, RGPD</li>
+                <li><strong>Partenariats :</strong> Propositions de collaboration</li>
+                <li><strong>Autres :</strong> Toute autre demande</li>
+            </ul>
+        </div>
+
+        <div class="info-section">
+            <h2>⏱️ Temps de réponse</h2>
+            <p>Nous faisons notre possible pour répondre à tous les messages dans un délai de 48 à 72 heures ouvrables.</p>
+        </div>
+
+        <div class="info-section">
+            <h2>🔒 Confidentialité</h2>
+            <p>Vos messages sont traités de manière confidentielle. Nous ne partagerons jamais vos informations avec des tiers sans votre consentement explicite.</p>
+        </div>
+
+        <div class="info-section" style="border-top: none; padding-top: 0;">
+            <h2>🌐 Autres liens utiles</h2>
+            <p style="margin-top: 15px;">
+                <a href="privacy.html" style="color: #667eea; text-decoration: none; margin-right: 15px;">📋 Politique de confidentialité</a>
+                <a href="terms.html" style="color: #667eea; text-decoration: none;">📜 Conditions d'utilisation</a>
+            </p>
+        </div>
+
+        <p style="text-align: center; color: #999; margin-top: 30px; font-size: 0.9rem;">
+            Merci d'utiliser notre Générateur de QR Code !
+        </p>
+    </div>
+</body>
+</html>
