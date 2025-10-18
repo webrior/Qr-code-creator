@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Générateur de QR Code gratuit et instantané. Créez des QR codes pour URL, texte, email, téléphone, WiFi, SMS. Téléchargez en haute qualité PNG.">
     <meta name="keywords" content="QR code, générateur QR, QR code gratuit, créer QR code, scanner QR, code barre">
-
+    
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1930140755399931"
-     crossorigin="anonymous"></script>
+         crossorigin="anonymous"></script>
     
     <title>Générateur de QR Code Gratuit - Créez vos QR Codes Instantanément</title>
     <style>
@@ -69,6 +69,59 @@
         .ad-space.sidebar-ad {
             max-width: 300px;
             min-height: 250px;
+        }
+
+        .intro-section {
+            background: rgba(255,255,255,0.98);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .intro-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .intro-section h3 {
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .intro-section h4 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .intro-section p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .intro-section ul, .intro-section ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .intro-section li {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
         }
 
         .main-content {
@@ -160,12 +213,43 @@
             text-align: center;
             margin-top: 30px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            min-height: 400px;
         }
 
         #qrCanvas {
             max-width: 100%;
             border: 3px solid #f5f5f5;
             border-radius: 8px;
+            display: none;
+        }
+
+        #qrCanvas.visible {
+            display: block;
+        }
+
+        .qr-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            color: #999;
+        }
+
+        .qr-placeholder.hidden {
+            display: none;
+        }
+
+        .qr-placeholder-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .qr-placeholder-text {
+            font-size: 1.2rem;
+            font-weight: 600;
         }
 
         .customization {
@@ -306,6 +390,35 @@
             color: #667eea;
         }
 
+        .faq-section {
+            background: rgba(255,255,255,0.98);
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .faq-section h2 {
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+        }
+
+        .faq-item h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .faq-item p {
+            color: #555;
+            line-height: 1.8;
+        }
+
         footer {
             background: rgba(255,255,255,0.95);
             border-radius: 12px;
@@ -353,22 +466,98 @@
             .download-buttons {
                 grid-template-columns: 1fr;
             }
+
+            .intro-section {
+                padding: 25px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>📱 Générateur de QR Code</h1>
-            <p class="subtitle">Créez vos QR codes gratuitement en quelques secondes</p>
+            <h1>📱 Générateur de QR Code Gratuit</h1>
+            <p class="subtitle">Créez vos QR codes instantanément et sans limite</p>
         </header>
 
         <div class="ad-space header-ad">
             <p>Espace publicitaire 728x90</p>
         </div>
 
+        <!-- SECTION INTRODUCTION -->
+        <div class="intro-section">
+            <h2>Créez des QR Codes Professionnels Gratuitement</h2>
+            <p>Bienvenue sur notre générateur de QR Code gratuit ! Cet outil vous permet de créer des codes QR personnalisés en quelques secondes, sans inscription ni limite d'utilisation. Que vous soyez entrepreneur, créateur de contenu, enseignant ou particulier, notre générateur répond à tous vos besoins de partage d'informations rapide et efficace.</p>
+
+            <div class="highlight-box">
+                <strong>🎯 100% Gratuit, Sans Limite, Sans Inscription</strong>
+                <p>Créez autant de QR codes que vous le souhaitez, téléchargez-les en haute qualité et utilisez-les immédiatement pour tous vos projets personnels et professionnels.</p>
+            </div>
+
+            <h3>Qu'est-ce qu'un QR Code ?</h3>
+            <p>Un QR Code (Quick Response Code) est un code-barres bidimensionnel inventé en 1994 par l'entreprise japonaise Denso Wave. Contrairement aux codes-barres traditionnels qui ne contiennent que des informations horizontales, les QR codes stockent des données à la fois horizontalement et verticalement, leur permettant de contenir beaucoup plus d'informations (jusqu'à 4 296 caractères alphanumériques).</p>
+
+            <p>Aujourd'hui, les QR codes sont omniprésents dans notre quotidien : menus de restaurants, paiements sans contact, cartes de visite numériques, billets d'événements, connexions WiFi, et bien plus encore. Avec la démocratisation des smartphones équipés d'appareils photo haute résolution, scanner un QR code est devenu un geste simple et instantané.</p>
+
+            <h3>Pourquoi Utiliser Notre Générateur de QR Code ?</h3>
+            <p>Notre outil offre de nombreux avantages pour créer vos QR codes :</p>
+            <ul>
+                <li><strong>Génération instantanée :</strong> Votre QR code apparaît en temps réel pendant que vous tapez vos informations</li>
+                <li><strong>6 types de QR codes :</strong> URL, Texte, Email, Téléphone, SMS et WiFi pour tous vos besoins</li>
+                <li><strong>Personnalisation complète :</strong> Choisissez les couleurs et la taille de votre QR code</li>
+                <li><strong>Haute qualité :</strong> Téléchargez vos QR codes en PNG jusqu'à 1024x1024 pixels</li>
+                <li><strong>Aucune limite :</strong> Créez autant de QR codes que nécessaire, sans restriction</li>
+                <li><strong>Gratuit à vie :</strong> Pas d'abonnement, pas de frais cachés, totalement gratuit</li>
+                <li><strong>Vie privée respectée :</strong> Aucune donnée n'est collectée, tout fonctionne dans votre navigateur</li>
+                <li><strong>Compatible tous appareils :</strong> Fonctionne sur ordinateur, tablette et smartphone</li>
+            </ul>
+
+            <h3>Les 6 Types de QR Codes Disponibles</h3>
+
+            <h4>1. QR Code URL - Partagez Vos Liens</h4>
+            <p>Le type le plus populaire, parfait pour rediriger vers n'importe quel site web. Utilisez-le pour partager votre site internet, votre portfolio, vos réseaux sociaux (Instagram, LinkedIn, TikTok, Facebook), vos vidéos YouTube, ou tout autre lien en ligne. Idéal pour les cartes de visite, les affiches publicitaires, les flyers et les emballages produits.</p>
+
+            <h4>2. QR Code Texte - Messages Rapides</h4>
+            <p>Affichez n'importe quel texte lorsque quelqu'un scanne le code. Parfait pour des instructions, des citations, des messages de bienvenue, des codes promotionnels, ou des informations de contact. Très utile pour les événements, les expositions et les musées.</p>
+
+            <h4>3. QR Code Email - Contact Direct</h4>
+            <p>Créez un QR code qui ouvre directement l'application email avec le destinataire, le sujet et le message pré-remplis. Facilitez les demandes de contact, les demandes de devis ou le support client. Plus besoin de taper l'adresse email manuellement !</p>
+
+            <h4>4. QR Code Téléphone - Appel en Un Clic</h4>
+            <p>Générez un QR code qui lance un appel téléphonique automatiquement. Pratique pour les services clients, les urgences, les cartes de visite professionnelles ou les affiches de contact. Le numéro est composé automatiquement dès le scan.</p>
+
+            <h4>5. QR Code SMS - Message Pré-Rempli</h4>
+            <p>Créez un QR code qui ouvre l'application SMS avec un numéro et un message déjà saisis. Idéal pour les campagnes marketing, les jeux concours par SMS, les confirmations de participation, ou les systèmes de vote.</p>
+
+            <h4>6. QR Code WiFi - Connexion Automatique</h4>
+            <p>Le plus pratique ! Générez un QR code permettant la connexion automatique à un réseau WiFi sans taper le mot de passe. Parfait pour les restaurants, cafés, hôtels, bureaux, salles d'attente, événements ou votre maison. Vos invités se connectent en un scan !</p>
+
+            <h3>Comment Créer un QR Code en 4 Étapes</h3>
+            <ol>
+                <li><strong>Choisissez le type :</strong> Cliquez sur l'onglet correspondant à votre besoin (URL, Texte, Email, etc.)</li>
+                <li><strong>Entrez vos informations :</strong> Tapez l'URL, le texte ou les informations requises. Le QR code se génère automatiquement en temps réel !</li>
+                <li><strong>Personnalisez :</strong> Modifiez les couleurs (QR code et fond) et choisissez la taille (Petit, Moyen ou Grand)</li>
+                <li><strong>Téléchargez :</strong> Cliquez sur "Télécharger PNG" pour obtenir votre QR code en haute qualité, prêt à l'emploi</li>
+            </ol>
+
+            <h3>Où Utiliser Vos QR Codes ?</h3>
+            <p>Les possibilités d'utilisation des QR codes sont infinies :</p>
+            <ul>
+                <li><strong>Marketing et Communication :</strong> Affiches publicitaires, flyers, brochures, emballages produits, stands d'exposition</li>
+                <li><strong>Événements :</strong> Billets d'entrée, badges, programmes, menus, plans, signalétique</li>
+                <li><strong>Commerce :</strong> Étiquettes produits, catalogues, cartes de fidélité, bons de réduction, paiements</li>
+                <li><strong>Restaurants et Hôtellerie :</strong> Menus digitaux, connexion WiFi, avis clients, réservations</li>
+                <li><strong>Éducation :</strong> Supports pédagogiques, QCM, devoirs, ressources en ligne, bibliothèques</li>
+                <li><strong>Professionnel :</strong> Cartes de visite, signatures email, CV interactifs, portfolios</li>
+                <li><strong>Personnel :</strong> Faire-part, invitations de mariage, albums photos, cadeaux personnalisés</li>
+            </ul>
+        </div>
+
+        <!-- OUTIL GÉNÉRATEUR -->
         <div class="main-content">
             <div class="generator-section">
+                <h2 style="color: #667eea; margin-bottom: 20px;">🎨 Créez Votre QR Code</h2>
+                
                 <div class="tabs">
                     <button class="tab active" onclick="switchTab('url')">🔗 URL</button>
                     <button class="tab" onclick="switchTab('text')">📝 Texte</button>
@@ -385,8 +574,8 @@
                         <input type="url" id="urlInput" placeholder="https://exemple.com" oninput="generateQR()">
                     </div>
                     <div class="example-section">
-                        <h4>💡 Exemples :</h4>
-                        <p><code>https://monsite.com</code>, <code>https://youtube.com/@user</code></p>
+                        <h4>💡 Exemples d'utilisation :</h4>
+                        <p><code>https://monsite.com</code>, <code>https://instagram.com/username</code>, <code>https://youtube.com/@channel</code></p>
                     </div>
                 </div>
 
@@ -395,6 +584,10 @@
                     <div class="form-group">
                         <label>Texte libre</label>
                         <textarea id="textInput" placeholder="Entrez votre texte ici..." oninput="generateQR()"></textarea>
+                    </div>
+                    <div class="example-section">
+                        <h4>💡 Exemples d'utilisation :</h4>
+                        <p>Instructions, citations, codes promo, messages de bienvenue</p>
                     </div>
                 </div>
 
@@ -419,6 +612,10 @@
                     <div class="form-group">
                         <label>Numéro de téléphone</label>
                         <input type="tel" id="phoneInput" placeholder="+33 6 12 34 56 78" oninput="generateQR()">
+                    </div>
+                    <div class="example-section">
+                        <h4>💡 Format international recommandé :</h4>
+                        <p><code>+33 6 12 34 56 78</code> (France), <code>+1 555 123 4567</code> (USA)</p>
                     </div>
                 </div>
 
@@ -475,22 +672,27 @@
                 </div>
 
                 <div class="qr-display">
+                    <div id="qrPlaceholder" class="qr-placeholder">
+                        <div class="qr-placeholder-icon">📱</div>
+                        <div class="qr-placeholder-text">Votre QR code apparaîtra ici</div>
+                        <p style="color: #999; margin-top: 10px;">Commencez à taper pour voir le QR code se former en temps réel !</p>
+                    </div>
                     <canvas id="qrCanvas"></canvas>
                     <div class="download-buttons">
-                        <button class="primary" onclick="downloadQR('png')">💾 PNG</button>
-                        <button class="primary" onclick="downloadQR('svg')">💾 SVG</button>
+                        <button class="primary" onclick="downloadQR('png')">💾 Télécharger PNG</button>
+                        <button class="primary" onclick="downloadQR('svg')">💾 Télécharger SVG</button>
                     </div>
                 </div>
 
                 <div class="info-box">
-                    <h3>📋 Utilisations populaires</h3>
+                    <h3>📋 Utilisations Populaires</h3>
                     <ul>
-                        <li><strong>Sites web</strong> - Partagez votre URL facilement</li>
-                        <li><strong>Cartes de visite</strong> - vCard, contact direct</li>
-                        <li><strong>WiFi</strong> - Connexion automatique au réseau</li>
-                        <li><strong>Paiements</strong> - Bitcoin, PayPal, virements</li>
-                        <li><strong>Réseaux sociaux</strong> - Instagram, Facebook, LinkedIn</li>
-                        <li><strong>Documents</strong> - PDF, Google Drive, Dropbox</li>
+                        <li><strong>Sites web</strong> - Partagez votre URL facilement sur supports imprimés</li>
+                        <li><strong>Cartes de visite</strong> - vCard, contact direct, réseaux sociaux</li>
+                        <li><strong>WiFi</strong> - Connexion automatique sans taper le mot de passe</li>
+                        <li><strong>Paiements</strong> - Bitcoin, PayPal, virements bancaires</li>
+                        <li><strong>Réseaux sociaux</strong> - Instagram, Facebook, LinkedIn, TikTok</li>
+                        <li><strong>Documents</strong> - PDF, Google Drive, Dropbox, OneDrive</li>
                     </ul>
                 </div>
             </div>
@@ -504,15 +706,139 @@
             <p>Espace publicitaire 728x90</p>
         </div>
 
+        <!-- SECTION FAQ -->
+        <div class="faq-section">
+            <h2>❓ Questions Fréquemment Posées</h2>
+            
+            <div class="faq-item">
+                <h3>Les QR codes générés expirent-ils ?</h3>
+                <p>Non, les QR codes statiques créés avec notre générateur ne expirent jamais. Une fois généré et téléchargé, votre QR code fonctionnera indéfiniment, tant que le contenu vers lequel il pointe (URL, numéro de téléphone, etc.) reste valide et accessible. Vous pouvez l'imprimer et le distribuer en toute confiance.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Puis-je modifier un QR code après l'avoir créé ?</h3>
+                <p>Les QR codes statiques ne peuvent pas être modifiés après leur création. Si vous avez besoin de changer le contenu, vous devrez générer un nouveau QR code. C'est pourquoi il est important de bien vérifier vos informations avant de télécharger et d'imprimer votre QR code. Testez toujours votre QR code avant de le distribuer massivement.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Quelle taille dois-je choisir pour mon QR code ?</h3>
+                <p>Le choix de la taille dépend de votre usage. Pour une utilisation digitale (site web, email, réseaux sociaux), 512px (Moyen) est largement suffisant. Pour l'impression, nous recommandons 1024px (Grand) pour garantir une qualité optimale. La taille minimale recommandée pour l'impression physique est de 2x2 cm. Plus le QR code sera scanné de loin, plus il doit être grand.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Les QR codes sont-ils vraiment gratuits ?</h3>
+                <p>Oui, notre générateur est 100% gratuit, sans aucune limite d'utilisation, sans inscription requise et sans frais cachés. Vous pouvez créer autant de QR codes que vous le souhaitez, les télécharger en haute qualité et les utiliser librement pour tous vos projets personnels et professionnels. Aucun filigrane n'est ajouté.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Puis-je personnaliser les couleurs de mon QR code ?</h3>
+                <p>Absolument ! Notre générateur vous permet de personnaliser à la fois la couleur du QR code et la couleur du fond. Pour garantir une bonne lisibilité, assurez-vous d'avoir un contraste suffisant entre les deux couleurs. Le classique noir sur blanc offre le meilleur taux de lecture, mais vous pouvez utiliser les couleurs de votre marque.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Mes données sont-elles collectées ou stockées ?</h3>
+                <p>Non, absolument aucune donnée n'est collectée, stockée ou envoyée à un serveur. Tout le processus de génération du QR code se fait directement dans votre navigateur web, sur votre appareil. Vos informations restent 100% privées et confidentielles. Nous respectons totalement votre vie privée.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Comment scanner un QR code avec mon smartphone ?</h3>
+                <p>Sur iOS (iPhone) : Ouvrez simplement l'application Appareil Photo et pointez vers le QR code. Une notification apparaîtra automatiquement. Sur Android : La plupart des smartphones récents peuvent scanner directement depuis l'appareil photo. Sinon, téléchargez une application gratuite de lecture de QR code depuis le Play Store. Certains navigateurs comme Chrome ont aussi un scanner intégré.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Quelle est la différence entre les formats PNG et SVG ?</h3>
+                <p>Le PNG est un format image classique, parfait pour l'impression et l'utilisation web. Il offre une excellente qualité même en haute résolution. Le SVG est un format vectoriel qui peut être redimensionné à l'infini sans perte de qualité, idéal pour les designers et l'impression professionnelle. Pour la plupart des usages, le PNG convient parfaitement.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Comment tester mon QR code avant de l'imprimer ?</h3>
+                <p>C'est très simple ! Une fois votre QR code généré, scannez-le directement depuis votre écran avec votre smartphone. Vérifiez que l'action est correcte (le bon site web s'ouvre, le bon numéro s'affiche, etc.). Testez également la lisibilité : le QR code doit être scanné facilement, même de loin. Si vous avez des doutes, augmentez la taille ou le contraste.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Les QR codes fonctionnent-ils dans tous les pays ?</h3>
+                <p>Oui, les QR codes sont un standard international et fonctionnent partout dans le monde. Cependant, pour les numéros de téléphone et SMS, pensez à utiliser le format international avec l'indicatif pays (par exemple +33 pour la France, +1 pour les USA). Pour les URLs, assurez-vous que le site web est accessible depuis le pays cible.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Puis-je utiliser les QR codes à des fins commerciales ?</h3>
+                <p>Oui, tous les QR codes générés avec notre outil peuvent être utilisés librement pour n'importe quel usage, qu'il soit personnel, commercial, éducatif ou associatif. Vous pouvez les intégrer dans vos supports marketing, vos produits, vos services, vos événements, sans aucune restriction ni redevance à payer.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Combien d'informations peut contenir un QR code ?</h3>
+                <p>Un QR code peut théoriquement contenir jusqu'à 4 296 caractères alphanumériques ou 7 089 caractères numériques. Cependant, plus le contenu est long, plus le QR code devient dense et complexe, ce qui peut réduire sa lisibilité. Pour une meilleure scannabilité, privilégiez des contenus courts et concis, surtout pour les URLs (utilisez des raccourcisseurs d'URL si nécessaire).</p>
+            </div>
+        </div>
+
+        <!-- SECTION CONSEILS -->
+        <div class="intro-section" style="margin-top: 30px;">
+            <h2>💡 Conseils et Bonnes Pratiques</h2>
+            
+            <h3>Optimisation pour l'Impression</h3>
+            <p>Pour garantir que vos QR codes imprimés soient facilement scannables, suivez ces recommandations :</p>
+            <ul>
+                <li><strong>Taille minimale :</strong> 2x2 cm minimum pour une lecture confortable à 10-20 cm de distance</li>
+                <li><strong>Contraste élevé :</strong> Le noir sur blanc offre le meilleur taux de lecture (plus de 95%)</li>
+                <li><strong>Zone de silence :</strong> Laissez une marge blanche d'au moins 4 modules autour du QR code</li>
+                <li><strong>Surface plane :</strong> Évitez les surfaces courbes, froissées ou brillantes qui peuvent affecter la lecture</li>
+                <li><strong>Qualité d'impression :</strong> Utilisez une résolution minimum de 300 DPI pour l'impression professionnelle</li>
+                <li><strong>Test physique :</strong> Imprimez un exemplaire test et scannez-le dans différentes conditions de luminosité</li>
+            </ul>
+
+            <h3>Positionnement Stratégique</h3>
+            <p>L'emplacement de votre QR code est crucial pour son efficacité :</p>
+            <ul>
+                <li><strong>Hauteur idéale :</strong> Entre 1m et 1,5m pour une lecture debout confortable</li>
+                <li><strong>Visibilité :</strong> Placez le QR code là où les gens ont le temps de s'arrêter (pas sur un passage rapide)</li>
+                <li><strong>Éclairage :</strong> Assurez-vous que le QR code soit bien éclairé, évitez les zones d'ombre</li>
+                <li><strong>Contexte :</strong> Ajoutez un appel à l'action clair : "Scannez pour...", "Obtenez 10% de réduction"</li>
+                <li><strong>Accessibilité :</strong> Le QR code doit être accessible à tous, y compris aux personnes en fauteuil roulant</li>
+            </ul>
+
+            <h3>Erreurs Courantes à Éviter</h3>
+            <ul>
+                <li><strong>URL trop longue :</strong> Utilisez des raccourcisseurs d'URL pour les liens longs</li>
+                <li><strong>Mauvais contraste :</strong> Évitez les couleurs claires sur fond clair ou foncé sur foncé</li>
+                <li><strong>Taille insuffisante :</strong> Un QR code trop petit sera difficile voire impossible à scanner</li>
+                <li><strong>Pas de test :</strong> Testez toujours votre QR code avant impression massive</li>
+                <li><strong>URL expirée :</strong> Vérifiez que vos liens fonctionnent toujours après création du QR code</li>
+                <li><strong>Format inadapté :</strong> N'utilisez pas de JPG de basse qualité, privilégiez PNG ou SVG</li>
+            </ul>
+
+            <h3>Cas d'Usage Innovants</h3>
+            <p>Découvrez des utilisations créatives des QR codes :</p>
+            <ul>
+                <li><strong>Chasse au trésor :</strong> Créez des parcours ludiques avec des QR codes disseminés</li>
+                <li><strong>Musées interactifs :</strong> Ajoutez du contenu multimedia aux œuvres</li>
+                <li><strong>Tombstones numériques :</strong> Partagez des souvenirs et hommages sur les pierres tombales</li>
+                <li><strong>T-shirts personnalisés :</strong> Imprimez votre portfolio ou réseau social sur votre vêtement</li>
+                <li><strong>Emballages cadeaux :</strong> Ajoutez un message vidéo personnalisé</li>
+                <li><strong>Carnet de santé :</strong> Accès rapide aux informations médicales d'urgence</li>
+                <li><strong>Objets perdus :</strong> Ajoutez un QR code "Si trouvé, contactez..."</li>
+            </ul>
+
+            <h3>Statistiques et Tendances</h3>
+            <p>Les QR codes connaissent une croissance explosive depuis 2020 :</p>
+            <ul>
+                <li>89% des smartphones peuvent scanner des QR codes nativement (2024)</li>
+                <li>Le marché des QR codes devrait atteindre 3,2 milliards de dollars en 2025</li>
+                <li>75% des consommateurs ont scanné un QR code au moins une fois en 2023</li>
+                <li>Les menus restaurant via QR code ont augmenté de 400% depuis la pandémie</li>
+                <li>45% des paiements mobiles en Asie utilisent des QR codes</li>
+                <li>Le temps moyen de scan d'un QR code est de 2,4 secondes</li>
+            </ul>
+        </div>
+
         <footer>
-            <p><strong>Générateur de QR Code Gratuit</strong> - Outil simple et rapide</p>
+            <p><strong>Générateur de QR Code Gratuit</strong> - Outil simple, rapide et sans limite</p>
             <div class="footer-links">
                 <a href="privacy.html">Politique de confidentialité</a>
                 <a href="terms.html">Conditions d'utilisation</a>
                 <a href="contact.html">Contact</a>
             </div>
             <p style="margin-top: 15px; font-size: 12px; color: #999;">
-                Ce site utilise des cookies et des publicités. © 2025 - Tous droits réservés
+                Ce site utilise des cookies et des publicités pour financer l'hébergement. © 2025 - Tous droits réservés
             </p>
         </footer>
     </div>
@@ -579,9 +905,18 @@
 
         function generateQR() {
             const content = getQRContent();
-            if (!content) return;
-
+            const placeholder = document.getElementById('qrPlaceholder');
             const canvas = document.getElementById('qrCanvas');
+            
+            if (!content) {
+                placeholder.classList.remove('hidden');
+                canvas.classList.remove('visible');
+                return;
+            }
+
+            placeholder.classList.add('hidden');
+            canvas.classList.add('visible');
+
             const fg = document.getElementById('foregroundColor').value;
             const bg = document.getElementById('backgroundColor').value;
 
@@ -590,7 +925,8 @@
             canvas.remove();
             const newCanvas = document.createElement('canvas');
             newCanvas.id = 'qrCanvas';
-            container.insertBefore(newCanvas, container.firstChild);
+            newCanvas.className = 'visible';
+            container.insertBefore(newCanvas, placeholder.nextSibling);
 
             qrCode = new QRCode(newCanvas, {
                 text: content,
@@ -619,7 +955,6 @@
                 a.download = 'qrcode.png';
                 a.click();
             } else if (format === 'svg') {
-                // For SVG, we'll use PNG as fallback since QRCode.js doesn't support SVG directly
                 const url = canvas.toDataURL('image/png');
                 const a = document.createElement('a');
                 a.href = url;
@@ -628,12 +963,6 @@
                 alert('Note: Le format SVG n\'est pas supporté par cette bibliothèque. Le fichier PNG a été téléchargé à la place.');
             }
         }
-
-        // Generate initial QR code
-        setTimeout(() => {
-            document.getElementById('urlInput').value = 'https://exemple.com';
-            generateQR();
-        }, 100);
     </script>
 </body>
 </html>
