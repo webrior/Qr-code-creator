@@ -574,84 +574,90 @@
                 <div id="url-content" class="tab-content active">
                     <div class="form-group">
                         <label>URL du site web</label>
-                        <input type="url" id="urlInput" placeholder="https://exemple.com" oninput="generateQRDelayed()">
+                        <input type="url" id="urlInput" placeholder="https://exemple.com">
                     </div>
                     <div class="example-section">
                         <h4>💡 Exemples d'utilisation :</h4>
                         <p><code>https://monsite.com</code>, <code>https://instagram.com/username</code>, <code>https://youtube.com/@channel</code></p>
                     </div>
+                    <button class="primary" onclick="generateQR()">🎨 Générer le QR Code</button>
                 </div>
 
                 <!-- Text Tab -->
                 <div id="text-content" class="tab-content">
                     <div class="form-group">
                         <label>Texte libre</label>
-                        <textarea id="textInput" placeholder="Entrez votre texte ici..." oninput="generateQRDelayed()"></textarea>
+                        <textarea id="textInput" placeholder="Entrez votre texte ici..."></textarea>
                     </div>
                     <div class="example-section">
                         <h4>💡 Exemples d'utilisation :</h4>
                         <p>Instructions, citations, codes promo, messages de bienvenue</p>
                     </div>
+                    <button class="primary" onclick="generateQR()">🎨 Générer le QR Code</button>
                 </div>
 
                 <!-- Email Tab -->
                 <div id="email-content" class="tab-content">
                     <div class="form-group">
                         <label>Adresse email</label>
-                        <input type="email" id="emailInput" placeholder="webrior@gmail.com" oninput="generateQRDelayed()">
+                        <input type="email" id="emailInput" placeholder="webrior@gmail.com">
                     </div>
                     <div class="form-group">
                         <label>Sujet (optionnel)</label>
-                        <input type="text" id="emailSubject" placeholder="Sujet du message" oninput="generateQRDelayed()">
+                        <input type="text" id="emailSubject" placeholder="Sujet du message">
                     </div>
                     <div class="form-group">
                         <label>Message (optionnel)</label>
-                        <textarea id="emailBody" placeholder="Corps du message" oninput="generateQRDelayed()"></textarea>
+                        <textarea id="emailBody" placeholder="Corps du message"></textarea>
                     </div>
+                    <button class="primary" onclick="generateQR()">🎨 Générer le QR Code</button>
                 </div>
 
                 <!-- Phone Tab -->
                 <div id="phone-content" class="tab-content">
                     <div class="form-group">
                         <label>Numéro de téléphone</label>
-                        <input type="tel" id="phoneInput" placeholder="+33 6 12 34 56 78" oninput="generateQRDelayed()">
+                        <input type="tel" id="phoneInput" placeholder="+33 6 12 34 56 78">
                     </div>
                     <div class="example-section">
                         <h4>💡 Format international recommandé :</h4>
                         <p><code>+33 6 12 34 56 78</code> (France), <code>+1 555 123 4567</code> (USA)</p>
                     </div>
+                    <button class="primary" onclick="generateQR()">🎨 Générer le QR Code</button>
                 </div>
 
                 <!-- SMS Tab -->
                 <div id="sms-content" class="tab-content">
                     <div class="form-group">
                         <label>Numéro de téléphone</label>
-                        <input type="tel" id="smsNumber" placeholder="+33 6 12 34 56 78" oninput="generateQRDelayed()">
+                        <input type="tel" id="smsNumber" placeholder="+33 6 12 34 56 78">
                     </div>
                     <div class="form-group">
                         <label>Message</label>
-                        <textarea id="smsMessage" placeholder="Votre message..." oninput="generateQRDelayed()"></textarea>
+                        <textarea id="smsMessage" placeholder="Votre message..."></textarea>
                     </div>
+                    <button class="primary" onclick="generateQR()">🎨 Générer le QR Code</button>
                 </div>
 
                 <!-- WiFi Tab -->
                 <div id="wifi-content" class="tab-content">
                     <div class="form-group">
                         <label>Nom du réseau (SSID)</label>
-                        <input type="text" id="wifiSSID" placeholder="MonWiFi" oninput="generateQRDelayed()">
+                        <input type="text" id="wifiSSID" placeholder="MonWiFi">
                     </div>
                     <div class="form-group">
                         <label>Mot de passe</label>
-                        <input type="text" id="wifiPassword" placeholder="motdepasse123" oninput="generateQRDelayed()">
+                        <input type="text" id="wifiPassword" placeholder="motdepasse123">
                     </div>
                     <div class="form-group">
                         <label>Type de sécurité</label>
-                        <select id="wifiSecurity" onchange="generateQRDelayed()">
+                        <select id="wifiSecurity">
                             <option value="WPA">WPA/WPA2</option>
                             <option value="WEP">WEP</option>
                             <option value="nopass">Aucune</option>
                         </select>
                     </div>
+                    <button class="primary" onclick="generateQR()">🎨 Générer le QR Code</button>
                 </div>
 
                 <!-- Customization -->
@@ -660,11 +666,11 @@
                     <div class="color-picker-group">
                         <div class="color-picker">
                             <label>Couleur :</label>
-                            <input type="color" id="foregroundColor" value="#000000" onchange="generateQRDelayed()">
+                            <input type="color" id="foregroundColor" value="#000000">
                         </div>
                         <div class="color-picker">
                             <label>Fond :</label>
-                            <input type="color" id="backgroundColor" value="#ffffff" onchange="generateQRDelayed()">
+                            <input type="color" id="backgroundColor" value="#ffffff">
                         </div>
                     </div>
                     <div class="size-selector">
@@ -678,9 +684,9 @@
                     <div id="qrPlaceholder" class="qr-placeholder">
                         <div class="qr-placeholder-icon">📱</div>
                         <div class="qr-placeholder-text">Votre QR code apparaîtra ici</div>
-                        <p style="color: #999; margin-top: 10px;">Commencez à taper, le QR code se génère automatiquement après 1 seconde !</p>
+                        <p style="color: #999; margin-top: 10px;">Remplissez les champs ci-dessus et cliquez sur "Générer le QR Code"</p>
                     </div>
-                    <canvas id="qrCanvas"></canvas>
+                    <div id="qrCanvas"></div>
                     <div class="download-buttons">
                         <button class="primary" onclick="downloadQR('png')">💾 Télécharger PNG</button>
                         <button class="primary" onclick="downloadQR('svg')">💾 Télécharger SVG</button>
