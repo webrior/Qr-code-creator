@@ -219,13 +219,16 @@
 
         #qrCanvas {
             max-width: 100%;
-            border: 3px solid #f5f5f5;
-            border-radius: 8px;
             display: none;
         }
 
         #qrCanvas.visible {
             display: block;
+        }
+
+        #qrCanvas img {
+            border: 3px solid #f5f5f5;
+            border-radius: 8px;
         }
 
         .qr-placeholder {
@@ -571,7 +574,7 @@
                 <div id="url-content" class="tab-content active">
                     <div class="form-group">
                         <label>URL du site web</label>
-                        <input type="url" id="urlInput" placeholder="https://exemple.com" oninput="generateQR()">
+                        <input type="url" id="urlInput" placeholder="https://exemple.com" oninput="generateQRDelayed()">
                     </div>
                     <div class="example-section">
                         <h4>💡 Exemples d'utilisation :</h4>
@@ -583,7 +586,7 @@
                 <div id="text-content" class="tab-content">
                     <div class="form-group">
                         <label>Texte libre</label>
-                        <textarea id="textInput" placeholder="Entrez votre texte ici..." oninput="generateQR()"></textarea>
+                        <textarea id="textInput" placeholder="Entrez votre texte ici..." oninput="generateQRDelayed()"></textarea>
                     </div>
                     <div class="example-section">
                         <h4>💡 Exemples d'utilisation :</h4>
@@ -595,15 +598,15 @@
                 <div id="email-content" class="tab-content">
                     <div class="form-group">
                         <label>Adresse email</label>
-                        <input type="email" id="emailInput" placeholder="webrior@gmail.com" oninput="generateQR()">
+                        <input type="email" id="emailInput" placeholder="webrior@gmail.com" oninput="generateQRDelayed()">
                     </div>
                     <div class="form-group">
                         <label>Sujet (optionnel)</label>
-                        <input type="text" id="emailSubject" placeholder="Sujet du message" oninput="generateQR()">
+                        <input type="text" id="emailSubject" placeholder="Sujet du message" oninput="generateQRDelayed()">
                     </div>
                     <div class="form-group">
                         <label>Message (optionnel)</label>
-                        <textarea id="emailBody" placeholder="Corps du message" oninput="generateQR()"></textarea>
+                        <textarea id="emailBody" placeholder="Corps du message" oninput="generateQRDelayed()"></textarea>
                     </div>
                 </div>
 
@@ -611,7 +614,7 @@
                 <div id="phone-content" class="tab-content">
                     <div class="form-group">
                         <label>Numéro de téléphone</label>
-                        <input type="tel" id="phoneInput" placeholder="+33 6 12 34 56 78" oninput="generateQR()">
+                        <input type="tel" id="phoneInput" placeholder="+33 6 12 34 56 78" oninput="generateQRDelayed()">
                     </div>
                     <div class="example-section">
                         <h4>💡 Format international recommandé :</h4>
@@ -623,11 +626,11 @@
                 <div id="sms-content" class="tab-content">
                     <div class="form-group">
                         <label>Numéro de téléphone</label>
-                        <input type="tel" id="smsNumber" placeholder="+33 6 12 34 56 78" oninput="generateQR()">
+                        <input type="tel" id="smsNumber" placeholder="+33 6 12 34 56 78" oninput="generateQRDelayed()">
                     </div>
                     <div class="form-group">
                         <label>Message</label>
-                        <textarea id="smsMessage" placeholder="Votre message..." oninput="generateQR()"></textarea>
+                        <textarea id="smsMessage" placeholder="Votre message..." oninput="generateQRDelayed()"></textarea>
                     </div>
                 </div>
 
@@ -635,15 +638,15 @@
                 <div id="wifi-content" class="tab-content">
                     <div class="form-group">
                         <label>Nom du réseau (SSID)</label>
-                        <input type="text" id="wifiSSID" placeholder="MonWiFi" oninput="generateQR()">
+                        <input type="text" id="wifiSSID" placeholder="MonWiFi" oninput="generateQRDelayed()">
                     </div>
                     <div class="form-group">
                         <label>Mot de passe</label>
-                        <input type="text" id="wifiPassword" placeholder="motdepasse123" oninput="generateQR()">
+                        <input type="text" id="wifiPassword" placeholder="motdepasse123" oninput="generateQRDelayed()">
                     </div>
                     <div class="form-group">
                         <label>Type de sécurité</label>
-                        <select id="wifiSecurity" onchange="generateQR()">
+                        <select id="wifiSecurity" onchange="generateQRDelayed()">
                             <option value="WPA">WPA/WPA2</option>
                             <option value="WEP">WEP</option>
                             <option value="nopass">Aucune</option>
@@ -657,11 +660,11 @@
                     <div class="color-picker-group">
                         <div class="color-picker">
                             <label>Couleur :</label>
-                            <input type="color" id="foregroundColor" value="#000000" onchange="generateQR()">
+                            <input type="color" id="foregroundColor" value="#000000" onchange="generateQRDelayed()">
                         </div>
                         <div class="color-picker">
                             <label>Fond :</label>
-                            <input type="color" id="backgroundColor" value="#ffffff" onchange="generateQR()">
+                            <input type="color" id="backgroundColor" value="#ffffff" onchange="generateQRDelayed()">
                         </div>
                     </div>
                     <div class="size-selector">
@@ -675,7 +678,7 @@
                     <div id="qrPlaceholder" class="qr-placeholder">
                         <div class="qr-placeholder-icon">📱</div>
                         <div class="qr-placeholder-text">Votre QR code apparaîtra ici</div>
-                        <p style="color: #999; margin-top: 10px;">Commencez à taper pour voir le QR code se former en temps réel !</p>
+                        <p style="color: #999; margin-top: 10px;">Commencez à taper, le QR code se génère automatiquement après 1 seconde !</p>
                     </div>
                     <canvas id="qrCanvas"></canvas>
                     <div class="download-buttons">
@@ -848,6 +851,7 @@
         let currentTab = 'url';
         let qrSize = 512;
         let qrCode = null;
+        let generateTimeout = null;
 
         function switchTab(tab) {
             currentTab = tab;
@@ -858,14 +862,14 @@
             event.target.classList.add('active');
             document.getElementById(tab + '-content').classList.add('active');
             
-            generateQR();
+            generateQRDelayed();
         }
 
         function setSize(size) {
             qrSize = size;
             document.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-            generateQR();
+            generateQRDelayed();
         }
 
         function getQRContent() {
@@ -882,60 +886,82 @@
                     const email = document.getElementById('emailInput').value;
                     const subject = document.getElementById('emailSubject').value;
                     const body = document.getElementById('emailBody').value;
-                    content = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    if (email) {
+                        content = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    }
                     break;
                 case 'phone':
-                    content = 'tel:' + document.getElementById('phoneInput').value;
+                    const phone = document.getElementById('phoneInput').value;
+                    if (phone) {
+                        content = 'tel:' + phone;
+                    }
                     break;
                 case 'sms':
                     const smsNumber = document.getElementById('smsNumber').value;
                     const smsMessage = document.getElementById('smsMessage').value;
-                    content = `sms:${smsNumber}?body=${encodeURIComponent(smsMessage)}`;
+                    if (smsNumber) {
+                        content = `sms:${smsNumber}?body=${encodeURIComponent(smsMessage)}`;
+                    }
                     break;
                 case 'wifi':
                     const ssid = document.getElementById('wifiSSID').value;
                     const password = document.getElementById('wifiPassword').value;
                     const security = document.getElementById('wifiSecurity').value;
-                    content = `WIFI:T:${security};S:${ssid};P:${password};;`;
+                    if (ssid) {
+                        content = `WIFI:T:${security};S:${ssid};P:${password};;`;
+                    }
                     break;
             }
             
             return content;
         }
 
+        function generateQRDelayed() {
+            // Annule le timer précédent
+            if (generateTimeout) {
+                clearTimeout(generateTimeout);
+            }
+            
+            // Lance un nouveau timer de 1 seconde
+            generateTimeout = setTimeout(() => {
+                generateQR();
+            }, 1000);
+        }
+
         function generateQR() {
             const content = getQRContent();
             const placeholder = document.getElementById('qrPlaceholder');
-            const canvas = document.getElementById('qrCanvas');
+            const canvasWrapper = document.getElementById('qrCanvas');
             
             if (!content) {
                 placeholder.classList.remove('hidden');
-                canvas.classList.remove('visible');
+                canvasWrapper.classList.remove('visible');
+                canvasWrapper.innerHTML = '';
                 return;
             }
 
             placeholder.classList.add('hidden');
-            canvas.classList.add('visible');
+            canvasWrapper.classList.add('visible');
 
             const fg = document.getElementById('foregroundColor').value;
             const bg = document.getElementById('backgroundColor').value;
 
-            // Clear previous QR
-            const container = canvas.parentElement;
-            canvas.remove();
-            const newCanvas = document.createElement('canvas');
-            newCanvas.id = 'qrCanvas';
-            newCanvas.className = 'visible';
-            container.insertBefore(newCanvas, placeholder.nextSibling);
+            // Clear previous QR completely
+            canvasWrapper.innerHTML = '';
 
-            qrCode = new QRCode(newCanvas, {
-                text: content,
-                width: qrSize,
-                height: qrSize,
-                colorDark: fg,
-                colorLight: bg,
-                correctLevel: QRCode.CorrectLevel.H
-            });
+            // Create new QR code
+            try {
+                qrCode = new QRCode(canvasWrapper, {
+                    text: content,
+                    width: qrSize,
+                    height: qrSize,
+                    colorDark: fg,
+                    colorLight: bg,
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+            } catch (e) {
+                console.error('Erreur génération QR:', e);
+            }
         }
 
         function downloadQR(format) {
@@ -945,17 +971,20 @@
                 return;
             }
 
-            const canvas = document.getElementById('qrCanvas').querySelector('canvas');
-            if (!canvas) return;
+            const canvasElement = document.querySelector('#qrCanvas canvas');
+            if (!canvasElement) {
+                alert('Aucun QR code à télécharger. Veuillez d\'abord générer un QR code.');
+                return;
+            }
 
             if (format === 'png') {
-                const url = canvas.toDataURL('image/png');
+                const url = canvasElement.toDataURL('image/png');
                 const a = document.createElement('a');
                 a.href = url;
                 a.download = 'qrcode.png';
                 a.click();
             } else if (format === 'svg') {
-                const url = canvas.toDataURL('image/png');
+                const url = canvasElement.toDataURL('image/png');
                 const a = document.createElement('a');
                 a.href = url;
                 a.download = 'qrcode.png';
